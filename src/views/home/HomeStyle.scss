@@ -1,0 +1,10 @@
+@import "./../../common/styles/colors";
+@import "./../../common/styles/fonts";
+
+.container {
+  h1 {
+    background-color: $secondary;
+    color: $white;
+    font-family: $fontThin;
+  }
+}

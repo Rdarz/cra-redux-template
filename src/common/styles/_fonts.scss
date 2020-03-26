@@ -1,0 +1,18 @@
+@mixin font_otf($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file+".otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@include font_otf("Gotham-Book", "./../../../assets/fonts/Gotham-Book");
+@include font_otf("Gotham-Light", "./../../../assets/fonts/Gotham-Light");
+@include font_otf("Gotham-Medium", "./../../../assets/fonts/Gotham-Medium");
+@include font_otf("Gotham-Thin", "./../../../assets/fonts/Gotham-Thin");
+
+$fontBook: "Gotham-Book";
+$fontMedium: "Gotham-Light";
+$fontLight: "Gotham-Medium";
+$fontThin: "Gotham-Thin";
