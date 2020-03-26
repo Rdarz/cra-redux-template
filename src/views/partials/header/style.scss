@@ -1,0 +1,13 @@
+@import "common/styles/_colors.scss";
+// @import "common/styles/_fonts.scss";
+
+.header {
+  background-color: $primary;
+
+  .headerText {
+    color: $white;
+    padding: 20px;
+    // font-family: $fontBook;
+    font-size: 24px;
+  }
+}

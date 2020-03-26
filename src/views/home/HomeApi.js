@@ -1,6 +1,6 @@
 import { getFlightDetailsSuccess } from "./HomeActions"
-import { get } from "../../webservice/AxiosClient"
-import api from "../../common/constants/ApiConstants"
+import { get } from "webservice/AxiosClient"
+import api from "common/constants/ApiConstants"
 
 export const getFlightDetails = (props = null) => {
   return async (dispatch, getState) => {

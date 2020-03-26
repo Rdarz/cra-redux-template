@@ -1,5 +1,5 @@
 import axios from "axios"
-import { api } from "../common/utils/apiConfig"
+import { api } from "common/utils/apiConfig"
 
 export const axiosInstance = axios.create({
   baseURL: api.baseURL + api.restApiRoot

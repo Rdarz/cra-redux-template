@@ -1,5 +1,6 @@
 import React, { Component } from "react"
-import "./../HomeStyle.scss"
+import "views/home/HomeStyle.scss"
+import Header from "views/partials/header"
 
 export class Home extends Component {
   state = {
@@ -18,13 +19,15 @@ export class Home extends Component {
   render() {
     const { flightList } = this.state
     return (
-      <div className="container">
-        <h1>Hello World</h1>
-        {flightList &&
-          flightList.length &&
-          flightList.map(item => {
-            return <h2>{item.name}</h2>
-          })}
+      <div className="">
+        <Header />
+        <div className="container">
+          {flightList &&
+            flightList.length &&
+            flightList.map(item => {
+              return <h2>{item.name}</h2>
+            })}
+        </div>
       </div>
     )
   }
