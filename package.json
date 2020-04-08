@@ -1,11 +1,7 @@
 {
   "name": "@rdarz/cra-template-redux",
   "version": "0.1.0",
-  "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
-  },
+  "description": "The Redux template for Create React App.",
   "keywords": [
     "react",
     "create-react-app",
@@ -19,8 +15,18 @@
     "cra redux template",
     "cra redux"
   ],
-  "description": "The Redux template for Create React App.",
+  "author": "Rahul Darji",
   "license": "MIT",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rdarz/cra-redux-template"
+  },
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js --env=jsdom"
+  },
   "dependencies": {
     "axios": "^0.19.2",
     "connected-react-router": "^6.8.0",
@@ -106,9 +112,5 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Rdarz/cra-redux-template"
   }
 }
