@@ -1,11 +1,41 @@
-This boilerplate includes:
-1. React (CRA)
-2. Redux/Redux-thunk
-3. React-router
-4. React-bootstrap
-5. Axios
-6. SASS 
-7. Fontawsome(v5.2.0), Bootstrap(4.4.1), Roboto fonts (google link) - CDN links added in index.html file
+## Usage
 
-Project structure 
-- Module based pattern followed
+### npx
+
+```sh
+npm install @rdarz/cra-template-redux
+```
+
+## Includes
+
+- [React CRA][cra]
+- [axios][axios]
+- [redux][redux]
+- [react-router][react-router]
+- [redux-thunk][redux-thunk]
+- [node-sass][node-sass]
+- [react-bootstrap][react-bootstrap]
+
+## Features
+
+- VS Code support
+- Initial code that follows best practices and uses tools included
+- Async data fetching with axios
+- Styling with scss modules
+
+## License
+
+Licensed under the MIT license.
+
+<!-- prettier-ignore-start -->
+[npm]: https://www.npmjs.com/
+[node]: https://nodejs.org
+[package]: https://www.npmjs.com/package/
+[cra]: https://github.com/facebook/create-react-app
+[axios]: https://github.com/axios/axios
+[redux]: https://github.com/reduxjs/redux
+[redux-thunk]: https://github.com/reduxjs/redux-thunk
+[react-router]: https://github.com/ReactTraining/react-router
+[node-sass]: https://github.com/sass/node-sass
+[react-bootstrap]: https://github.com/react-bootstrap/react-bootstrap
+<!-- prettier-ignore-end -->
