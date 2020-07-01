@@ -6,6 +6,14 @@
 npm install @rdarz/cra-template-redux
 ```
 
+### Absolute path setup
+
+Create new file at root level with .env name. And add following line in that.
+
+```
+ NODE_PATH=src/
+```
+
 ## Includes
 
 - [React CRA][cra]
@@ -38,4 +46,5 @@ Licensed under the MIT license.
 [react-router]: https://github.com/ReactTraining/react-router
 [node-sass]: https://github.com/sass/node-sass
 [react-bootstrap]: https://github.com/react-bootstrap/react-bootstrap
+[Dummy-User-Data]: https://reqres.in/
 <!-- prettier-ignore-end -->

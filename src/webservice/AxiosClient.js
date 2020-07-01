@@ -1,17 +1,16 @@
-import axios from "axios"
-import { api } from "common/utils/apiConfig"
+import axios from 'axios'
+import { api } from 'common/utils/apiConfig'
 
 export const axiosInstance = axios.create({
   baseURL: api.baseURL + api.restApiRoot
 })
 
 axiosInstance.interceptors.request.use(
-  function(config) {
-    console.log("baseURL====>>>", api.baseURL + api.restApiRoot)
-    config.headers["Content-Type"] = "application/json"
+  function (config) {
+    config.headers['Content-Type'] = 'application/json'
     return config
   },
-  function(err) {
+  function (err) {
     return Promise.reject(err)
   }
 )
@@ -26,7 +25,7 @@ export async function post(
   let res = []
   return await axiosInstance
     .post(apiName, params)
-    .then(response => {
+    .then((response) => {
       if (response.status === 200) {
         const { data } = response
         if (data) {
@@ -34,19 +33,19 @@ export async function post(
         } else if (onFailure) {
           onFailure(response)
         } else {
-          console.log("Something went wrong")
+          console.log('Something went wrong')
         }
       } else {
         if (onError) {
           onError(response.status)
         } else {
-          console.log("Something went wrong")
+          console.log('Something went wrong')
         }
       }
       res = response
       return response
     })
-    .catch(e => {
+    .catch((e) => {
       if (onError) {
         onError(e)
       } else {
@@ -64,30 +63,30 @@ export async function get(
   let res = []
   return await axiosInstance
     .get(apiName)
-    .then(response => {
-      console.log("INSIDE GET API", response)
+    .then((response) => {
+      console.log('INSIDE GET API', response)
       if (response.status === 200) {
         const { data, statusText } = response
 
-        if (data && data.length) {
+        if (data) {
           onSuccess(data, response)
         } else if (onFailure) {
           onFailure(response)
         } else {
-          console.log("Something went wrong")
+          console.log('Something went wrong')
         }
       } else {
         if (onError) {
           onError(response.status)
         } else {
-          console.log("Something went wrong")
+          console.log('Something went wrong')
         }
       }
       res = response
       return response
     })
-    .catch(e => {
-      console.log("INSIDE GET", e, e.message)
+    .catch((e) => {
+      console.log('INSIDE GET', e, e.message)
       if (onError) {
         onError(e)
       } else {

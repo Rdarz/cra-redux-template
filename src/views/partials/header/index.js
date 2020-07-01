@@ -1,11 +1,11 @@
-import React from "react"
-import "./style.scss"
+import React from 'react'
+import './style.scss'
 
-const Header = props => {
+const Header = (props) => {
   return (
-    <div className="header">
-      <div className="fluid">
-        <div className="headerText">BookMyFlight</div>
+    <div className='header'>
+      <div className='fluid'>
+        <div className='headerText'>Users Gallery</div>
       </div>
     </div>
   )

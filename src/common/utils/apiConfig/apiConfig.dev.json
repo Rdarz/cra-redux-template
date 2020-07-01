@@ -1,4 +1,4 @@
 {
-  "baseURL": "//tw-frontenders.firebaseio.com",
-  "restApiRoot": ""
+  "baseURL": "https://reqres.in",
+  "restApiRoot": "/api"
 }

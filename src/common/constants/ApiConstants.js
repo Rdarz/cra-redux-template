@@ -1,5 +1,6 @@
 //@flow
 export default {
   // flow constants
-  fetchFlightDetails: "/advFlightSearch.json"
+  fetchUserDetails: '/users',
+  fetchUserProfile: '/users/' //Add id on route dynamically
 }

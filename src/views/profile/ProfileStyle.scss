@@ -5,10 +5,10 @@
     background-color: $secondary;
     color: $white;
   }
-  .userDetailsBox {
-    width: 33.33%;
-    padding: 5%;
-    display: inline-block;
-    text-align: center;
+  .profile {
+    padding-top: 30px;
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: 20% 80%;
   }
 }

@@ -1,14 +1,13 @@
-import { getUserDetailsSuccess } from './HomeActions'
+import { getUserProfileSuccess } from './ProfileActions'
 import { get } from 'webservice/AxiosClient'
 import api from 'common/constants/ApiConstants'
 
-export const getUserDetails = (props = null) => {
+export const getUserProfile = (id) => {
   return async (dispatch, getState) => {
     return await get(
-      api.fetchUserDetails,
+      `${api.fetchUserProfile}${id}`,
       (onSuccessData) => {
-        console.log('onSuccessData====>>>', onSuccessData)
-        dispatch(getUserDetailsSuccess(onSuccessData))
+        dispatch(getUserProfileSuccess(onSuccessData))
         // setLoader(false)
       },
       (OnFailureData) => {

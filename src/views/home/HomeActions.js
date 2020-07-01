@@ -1,10 +1,10 @@
-export const GET_FLIGHT_DETAILS = "GET_FLIGHT_DETAILS"
+export const GET_USER_DETAILS = 'GET_USER_DETAILS'
 
 // -------------------Auth Loading Actions--------------------
 
-export const getFlightDetailsSuccess = payload => {
+export const getUserDetailsSuccess = (payload) => {
   return {
-    type: GET_FLIGHT_DETAILS,
+    type: GET_USER_DETAILS,
     payload
   }
 }

@@ -1,16 +1,25 @@
-import { connect } from "react-redux"
-import Home from "./components"
-import { getFlightDetails } from "./HomeApi"
+import React, { useLayoutEffect, useState } from 'react'
+import './HomeStyle.scss'
+import Header from 'views/partials/header'
+import { useSelector, useDispatch } from 'react-redux'
+import { getUserDetails } from './HomeApi'
+import DataList from './components/DataList'
 
-const mapStateToProps = state => ({
-  flightList: state.home.getFlightDetails
-})
+const Home = () => {
+  const [userList, setUserList] = useState()
+  const userData = useSelector((state) => state.home.userDetails)
+  const dispatch = useDispatch()
 
-const mapDispatchToProps = {
-  getFlightDetails
+  useLayoutEffect(() => {
+    dispatch(getUserDetails())
+  }, [])
+
+  return (
+    <React.Fragment>
+      <Header />
+      <DataList data={userData && userData.data} />
+    </React.Fragment>
+  )
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Home)
+export default Home

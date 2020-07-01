@@ -1,9 +1,9 @@
-import { GET_USER_DETAILS } from './HomeActions'
+import { GET_USER_PROFILE } from './ProfileActions'
 
 const ACTION_HANDLERS = {
-  [GET_USER_DETAILS]: (state, action) => ({
+  [GET_USER_PROFILE]: (state, action) => ({
     ...state,
-    userDetails: action.payload
+    userProfile: action.payload
   })
 }
 
@@ -12,7 +12,7 @@ const ACTION_HANDLERS = {
 // ------------------------------------
 const initialState = {}
 
-export default function HomeReducer(state = initialState, action) {
+export default function ProfileReducer(state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]
   return handler ? handler(state, action) : state
 }
