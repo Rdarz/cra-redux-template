@@ -19,7 +19,10 @@ const Profile = () => {
   return (
     <React.Fragment>
       <Header />
-      <UserProfile data={userProfile.data} ad={userProfile.ad} />
+      <UserProfile
+        data={userProfile && userProfile.data}
+        ad={userProfile && userProfile.ad}
+      />
     </React.Fragment>
   )
 }
